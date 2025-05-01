@@ -2,7 +2,7 @@
 
 ## Overview
 
-This year the Ada staff has generously agreed to contribute their culinary skills to a coding bootcamp booth offering food & info pamphlets at the [Georgetown Carnival](https://georgetownseattle.org/georgetown-carnival-june-8-2024/). It's the day before the festivities kick off and _someone's_ Cavalier King Charles Spaniel has done his best to shred all of their recipes! Oh no! Can you help Ada staff put everything back together and save Carnival?
+This year the Ada staff has generously agreed to contribute their culinary skills to a coding bootcamp booth offering food & info pamphlets at the [Georgetown Carnival](https://georgetownseattle.org/georgetown-carnival-2025/). It's the day before the festivities kick off and _someone's_ Cavalier King Charles Spaniel has done his best to shred all of their recipes! Oh no! Can you help Ada staff put everything back together and save the Carnival?
 
 In this activity you'll be working with your fellow Adies to put together multiple scraps from a single recipe using Git. You'll accomplish this by successively merging in content from each individuals' copy of the recipes repo. Once all the of merges are finished (and any merge conflicts resolved) you'll have a complete recipe document which can be submitted to the original repository with a pull request.
 
@@ -28,11 +28,11 @@ Before we can start putting the recipe together we need to make sure that everyo
    - Rhino
    - Tarsier
  
-2. **Fork the activity repo**: One person in your group should fork the [carnival-recipes](https://github.com/Ada-C22/carnival-recipes) repo and then add everyone else as a collaborator.
-    - To add collaborators, go to **Settings** --> **Manage access** --> **Invite teams or people**
+2. **Fork the activity repo**: One person in your group should fork the [carnival-recipes](https://github.com/Ada-Activities/carnival-recipes) repo and then add everyone else as a collaborator.
+    - To add collaborators, go to **Settings** → **Access** → **Collaborators and teams**
     - Invite collaborators will need to accept the invitation. 
 3. **Clone the forked repo**: Everyone in your group should clone the forked repository.
-    - Check that you have the proper remote (and not the Ada-C22 remote) by typing `git remote -v` in the terminal.
+    - Check that you have the proper remote (and not the Ada-Activities remote) by running `git remote -v` in the terminal. (Be sure you've changed into the repo directory!)
 
 4. **Find your recipe scrap**: Each group is assigned six(6) or seven(7) recipe scraps, located in the `/scraps` directory, that should all be part of the same recipe. You can split these scraps up amongst your group however you wish.
 
@@ -44,20 +44,31 @@ Once everyone in your group has completed the baseline setup instructions above 
 1. **Create your branch**: Each person on a team will create a branch for themselves. Use `git switch -c BRANCH-NAME` to create the branch. Replace `BRANCH-NAME` with a name based off the recipe scrap you have.
 2. **Add your recipe scrap**: Copy the contents of your recipe scrap into the recipe file and then add and commit your changes to the recipe file. After completing this step each person in your group should have **different** content within the recipe file in their local repository.
 3. Each team member will push their changes up to github with `git push origin BRANCH-NAME`.
-4. Each team member will open a **pull request** trying to merge their branch on github into `main`.  **Be very careful to make the PR against your forked repository and NOT AdaGold.**
-    - To make the PR against your team members forked repository and not AdaGold, we will need to change the base repository
+4. Each team member will open a **pull request** trying to merge their branch on github into `main`.  **Be very careful to make the PR against your forked repository and NOT Ada-Activities.**
+    - To make the PR against your team members forked repository and not Ada-Activities, we will need to change the base repository
     - If there is a report of a merge conflict you will need to:
-       - Pull the current state of main into **their feature branch** with `git pull origin main`
+       - Pull the current state of main into **your feature branch**. We can either
+         - Perform the merge entirely remaining in our working branch
+           1. Confirm you are in your working branch
+           2. `git pull origin main`
+         - Or perform the merge using your local `main` branch
+           1. Switch to the `main` branch using `git switch main`
+           2. Pull changes into main with `git pull` or `git pull origin main`
+           3. Switch back to your working branch with `git switch your-branch-name`
+           4. Merge the changes from `main` with `git merge main`
        - in VS code select **accept both changes**
-       - Resolve the merge conflicts by rearranging the recipe and commit the result
+       - Resolve the merge conflicts by rearranging the recipe and commit the result.
+         - Remember that the goal of resolving a merge conflict is to combine the text in the files to "look right."
+         - For code, this can mean reorganizing logic based on our understanding of the purpose and general code structure.
+         - For these recipes, we'll need to make sure the ingredients list and steps all "make sense."
        - Push the result up to github with `git push origin BRANCH-NAME`
-       - Then attempt to merge their pull request.  If new changes have happened on main they may have to repeat step 1 above. 
-5. Merge changes simultaneously, kind of like the _ad-hoc_ strategy.
+       - Then attempt to merge the pull request again.  If new changes have happened on main they may have to repeat step 1 above. 
+5. Merge changes simultaneously, kind of like the _ad-hoc_ strategy below.
     - **Remember**: Whoever on your team is merging their changes into main must successfully finish that process (including fixing any merge conflicts!) before the next person can begin.  Help them with resolving the conflicts.
     - Work with your fellow team members to resolve any merge conflicts.
 6. Once everyone's changes have been merged together, the group as a whole should review it for completeness.
     - Make sure that none of the lines from your individual scrap are missing from the final result.
-    - If there are any fixes needed, pick one person in the group to make the necessary changes and commit them.
+    - If there are any fixes needed, pick one person in the group to make the necessary changes and commit them. Communicate!
 7. When everyone agrees that the recipe looks correct _one_ person should submit a PR to the original carnival-recipes repo.
 8. Finally, debrief with your whole group about how things went.
     - What went well? What didn't?
