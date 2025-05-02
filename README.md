@@ -28,7 +28,7 @@ Before we can start putting the recipe together we need to make sure that everyo
    - Rhino
    - Tarsier
  
-2. **Fork the activity repo**: One person in your group should fork the [carnival-recipes](https://github.com/Ada-Activities/carnival-recipes) repo and then add everyone else as a collaborator.
+2. **Fork the activity repo**: One person in your group should fork this repo and then add everyone else as a collaborator.
     - To add collaborators, go to **Settings** → **Access** → **Collaborators and teams**
     - Invite collaborators will need to accept the invitation. 
 3. **Clone the forked repo**: Everyone in your group should clone the forked repository.
