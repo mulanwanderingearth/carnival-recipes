@@ -48,13 +48,13 @@ Once the baseline setup instructions above are completed you're ready to start b
     - To make the PR against your team members forked repository and not Ada-Activities, we will need to change the base repository
     - If there is a report of a merge conflict you will need to:
        - Pull the current state of main into **your feature branch**. We can either
-         - Perform the merge entirely remaining in our feature branch
+         - Perform the merge while remaining in our feature branch
            1. Confirm you are in your feature branch
            2. `git pull origin main`
          - Or perform the merge using your local `main` branch
            1. Switch to the `main` branch using `git switch main`
            2. Pull changes into main with `git pull` or `git pull origin main`
-           3. Switch back to your working branch with `git switch your-branch-name`
+           3. Switch back to your feature branch with `git switch your-branch-name`
            4. Merge the changes from `main` with `git merge main`
        - In VS code select **accept both changes**
        - Resolve the merge conflicts by rearranging the recipe, add the changed file to the staging area, and then commit the result.
