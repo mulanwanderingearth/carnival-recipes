@@ -30,34 +30,34 @@ Before we can start putting the recipe together we need to make sure that everyo
  
 2. **Fork the activity repo**: One person in your group should fork this repo and then add everyone else as a collaborator.
     - To add collaborators, go to **Settings** → **Access** → **Collaborators and teams**
-    - Invite collaborators will need to accept the invitation. 
+    - Invited collaborators will need to accept the invitation. 
 3. **Clone the forked repo**: Everyone in your group should clone the forked repository.
-    - Check that you have the proper remote (and not the Ada-Activities remote) by running `git remote -v` in the terminal. (Be sure you've changed into the repo directory!)
+    - Check that you have the proper remote (and not the Ada-Activities remote) by running `git remote -v` in the terminal. (Be sure you've changed into the repo directory before running the command!)
 
-4. **Find your recipe scrap**: Each group is assigned six(6) or seven(7) recipe scraps, located in the `/scraps` directory, that should all be part of the same recipe. You can split these scraps up amongst your group however you wish.
+4. **Find your recipe scrap**: Each group is assigned six (6) or seven (7) recipe scraps, located in the `/scraps` directory, that should all be part of the same recipe. You can split these scraps up amongst your group however you wish.
 
 
 ### Building the recipe
 
-Once everyone in your group has completed the baseline setup instructions above you're ready to start building the recipe together. 
+Once the baseline setup instructions above are completed you're ready to start building the recipe together. The following 8 steps below should be performed by _every_ team member.
 
 1. **Create your branch**: Each person on a team will create a branch for themselves. Use `git switch -c BRANCH-NAME` to create the branch. Replace `BRANCH-NAME` with a name based off the recipe scrap you have.
-2. **Add your recipe scrap**: Copy the contents of your recipe scrap into the recipe file and then add and commit your changes to the recipe file. After completing this step each person in your group should have **different** content within the recipe file in their local repository.
+2. **Add your recipe scrap**: Look for your group's recipe file in the `/recipes` directory. Copy the contents of your recipe scrap into the recipe file and then add and commit your changes to the recipe file. After completing this step each person in your group should have **different** content within the recipe file in their local repository.
 3. Each team member will push their changes up to github with `git push origin BRANCH-NAME`.
 4. Each team member will open a **pull request** trying to merge their branch on github into `main`.  **Be very careful to make the PR against your forked repository and NOT Ada-Activities.**
     - To make the PR against your team members forked repository and not Ada-Activities, we will need to change the base repository
     - If there is a report of a merge conflict you will need to:
        - Pull the current state of main into **your feature branch**. We can either
-         - Perform the merge entirely remaining in our working branch
-           1. Confirm you are in your working branch
+         - Perform the merge entirely remaining in our feature branch
+           1. Confirm you are in your feature branch
            2. `git pull origin main`
          - Or perform the merge using your local `main` branch
            1. Switch to the `main` branch using `git switch main`
            2. Pull changes into main with `git pull` or `git pull origin main`
            3. Switch back to your working branch with `git switch your-branch-name`
            4. Merge the changes from `main` with `git merge main`
-       - in VS code select **accept both changes**
-       - Resolve the merge conflicts by rearranging the recipe and commit the result.
+       - In VS code select **accept both changes**
+       - Resolve the merge conflicts by rearranging the recipe, add the changed file to the staging area, and then commit the result.
          - Remember that the goal of resolving a merge conflict is to combine the text in the files to "look right."
          - For code, this can mean reorganizing logic based on our understanding of the purpose and general code structure.
          - For these recipes, we'll need to make sure the ingredients list and steps all "make sense."
